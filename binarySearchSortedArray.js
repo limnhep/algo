@@ -13,6 +13,9 @@ let binarySearch = function (a, key) {
   return findIndex; // return the index that is found in findIndex.
 };
 
+// time: O(n)
+// space: O(1)
+
 // Alternative solution using Recursive function
 
 let binarySearch = function (a, key) {
@@ -32,7 +35,10 @@ let binarySearch = function (a, key) {
   }
 };
 
-// Binary Search using iterative method (while loop)
+// time: O(logn)
+// space: O(1)
+
+// Binary Search using iterative method (while loop) => shorten
 
 let binarySearch = (a, key) => {
   let low = 0;
@@ -48,3 +54,6 @@ let binarySearch = (a, key) => {
     return -1;
   }
 };
+
+// time: O(logn)
+// space: O(1)
