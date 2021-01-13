@@ -11,3 +11,6 @@ const maxProfits = (prices) => {
   }
   return maxPrice; // returns the max price
 }
+
+// time: O(n)
+// space: O(1)
