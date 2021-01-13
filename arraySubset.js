@@ -13,3 +13,7 @@ const arraySubset = (arr, sub) => {
   }
   return false;
 };
+
+// time: O(n)
+// space: O(1)
+
