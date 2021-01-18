@@ -4,3 +4,6 @@ const search = (nums, target) = {
   }
 return undefined; // otherwise, return undefined
 }
+
+// time: O(n)
+// space: O(1)
