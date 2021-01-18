@@ -13,6 +13,9 @@ const searchSortedArr = (sortedNums) => {
   return -1;
 }
 
+// time: O(log(n))
+// space: O(1)
+
 // shorten alterantive:
 
 function search(numbers, target) {
@@ -28,3 +31,6 @@ function search(numbers, target) {
   }
   return - 1;
 }
+
+// time: O(log(n))
+// space: O(1)
