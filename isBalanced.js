@@ -20,3 +20,6 @@ const isBalanced = (str) => {
   }
   return !stack.length; // if 1 => true, 0 => false
 }
+
+// time: O(n)
+// space: O(n)
