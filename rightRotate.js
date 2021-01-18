@@ -5,6 +5,9 @@ const rightRotate = (arr, n) => {
   return (arr.splice(arr.length - n)).concat(arr.splice(0, arr.length));
 }
 
+// time: O(n)
+// space: O(n)
+
 // alternative solution:
 
 const rightRotate = (arr, n) => {
