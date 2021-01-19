@@ -64,3 +64,21 @@ function sockMerchant(n, ar) {
   }
   return sum
 }
+
+// another alternative solution:
+
+function sockMerchant(n, ar) {
+  let obj = {};
+  let sum = 0
+  for (let i = 0; i < ar.length; i++) {
+    if (!obj[ar[i]]) {
+      obj[ar[i]] = 0;
+    }
+    obj[ar[i]]++;
+    if (obj[ar[i]] === 2) {
+      sum++
+      obj[ar[i]] = 0
+    }
+  }
+  return sum
+}
