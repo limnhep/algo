@@ -1,3 +1,8 @@
+// A linked list is data structure represents a linear sequence of nodes and tracks three properties: head, tail, and length
+// head: the first node
+// tail: the last node
+// length: the number of nodes inside the list
+
 class LinkedList {
   constructor() {
     this.head = null;
