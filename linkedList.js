@@ -3,6 +3,8 @@
 // tail: the last node
 // length: the number of nodes inside the list
 
+// Linked List unlike array is non-contiguous.
+
 class LinkedList {
   constructor() {
     this.head = null;
@@ -36,3 +38,17 @@ class LinkedList {
     return this._length;
   }
 }
+
+// TIME AND SPACE COMPLEXITY ANALYSIS:
+
+// TIME:
+// access: O(n)
+// search: O(n)
+// insertion: O(1)
+// deletion: O(1)
+
+// SPACE:
+// access: O(n)
+// search: O(n)
+// insertion: O(n)
+// deletion: O(n)
