@@ -16,3 +16,17 @@ const multiplesOf3and5 = (number) => {
 
 // time: O(n)
 // space: O(1)
+
+// alternative solution:
+
+const multiplesOf3and5 = (number) => {
+  let sum = 0,
+    i = 3;
+  while (i < number) {
+    if (i % 3 === 0 || i % 5 === 0) {
+      sum += i;
+      i++;
+    }
+  }
+  return sum;
+}
