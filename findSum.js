@@ -43,3 +43,19 @@ const findSum = (arr, value) => {
 
 // time: O(nlogn)
 // space: O(n)
+
+var twoSum = function (nums, target) {
+  const obj = {};// create an object to store the potential num
+  for (let i = 0; i < nums.length; i++) { // iterate over each element inside the array
+    const potentialPair = target - nums[i];// find potential other pair
+    if (potentialPair in obj) {// if potential other pair exists in the object
+      const otherIndex = obj[potentialPair];
+      return [i, otherIndex];// return the indices
+    } else {
+      obj[nums[i]] = i;// otherwise, set the current value to current index
+    }
+  }
+};
+
+// time: O(n)
+// space: O(n)
