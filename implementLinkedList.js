@@ -64,4 +64,17 @@ class LinkedList {
     return current;
   }
 
+  addToHead(val) {
+    let newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.next;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
+
 }
