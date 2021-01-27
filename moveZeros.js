@@ -19,3 +19,15 @@ var moveZeroes = function (nums) {
 
 // time: O(logn)
 // space: O(1)
+
+// alternative solution
+
+var moveZeros = function (nums) {
+  const nonZeroArr = nums.filter(val => val !=== 0);
+  const zeroArrLength = nums.length - nonZeroArr.length;
+  const zeroArr = new Array(zeroArrLength).fill(0);
+  return [...nonZeroArr, ...zeroArr];
+}
+
+// time: O(n)
+// space: O(n)
