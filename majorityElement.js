@@ -21,3 +21,16 @@ var majorityElement = function (nums) {
     if (obj[num] > majority) return num;
   }
 };
+
+// time: O(n)
+// space: O(1)
+
+var majorityElement = function (nums) {
+  const obj = {},
+    majority = nums.length / 2;
+  nums.forEach(num => obj[num] = obj[num] + 1 || 1);
+  return nums.filter(num => obj[num] > nums.length / 2)[0];
+};
+
+// time: O(n)
+// space: O(1)
