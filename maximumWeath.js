@@ -29,5 +29,5 @@ var maximumWealth = function (accounts) {
   return Math.max.apply(null, accounts.map(val => sum(val)));
 };
 
-// time: n^2
-// space: n
+// time: O(n^2)
+// space: O(n)
