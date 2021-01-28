@@ -6,3 +6,6 @@ var shuffle = function (nums, n) {
   }
   return resultArr;
 };
+
+// time: O(n)
+// space: O(1)
