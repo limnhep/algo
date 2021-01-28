@@ -43,3 +43,6 @@ var numIdenticalPairs = function (nums) {
   }
   return counter;
 };
+
+// time: O(logN)
+// space: O(1)
