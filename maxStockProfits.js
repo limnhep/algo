@@ -5,7 +5,7 @@ var maxProfit = function (prices) {
   while (i < prices.length) {
     min = Math.min(prices[i], min);
     max = Math.max(prices[i] - min, max);
-    i++
+    i++;
   }
   return max;
 };
