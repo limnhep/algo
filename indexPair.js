@@ -52,3 +52,6 @@ var indexPairs = function (text, words) {
 
 // time: O(n ^ 2)
 // space: O(n)
+
+
+
