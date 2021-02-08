@@ -6,7 +6,7 @@ class TreeNode {
   }
 }
 
-// print left subtree, root, and the right subtree
+// print left subtree, root or self, and the right subtree
 
 function inOrderPrint(root) {
   if (root === null) return; // (!root) recursive case
@@ -15,7 +15,7 @@ function inOrderPrint(root) {
   inOrderPrint(root.right);
 }
 
-// print root, left subtree, and the right subtree
+// print root or self, left subtree, and the right subtree
 
 function preOrderPrint(root) {
   if (!root) return;
@@ -24,7 +24,7 @@ function preOrderPrint(root) {
   preOrderPrint(root.right);
 }
 
-// print left subtree, right subtree, and then root
+// print left subtree, right subtree, and then root or self
 
 function postOrderPrint(root) {
   if (!root) return;
