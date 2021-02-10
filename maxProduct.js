@@ -31,3 +31,18 @@ var maxProduct = function (nums) {
   }
   return result;
 };
+
+// alternative solution:
+
+var maxProduct = function (nums) {
+  let max = -Infinity,
+    currMax = 1,
+    currMin = 1;
+  for (let i = 0; i < nums.length; i++) {
+    let prevMax = currMax;
+    currMax = Math.max(nums[i] * prevMax, nums[i], currMin * nums[i]);
+    currMin = Math.min(nums[i] * prevMax, nums[i], currMin * nums[i]);
+    max = Math.max(max, currMax);
+  }
+  return max;
+};
