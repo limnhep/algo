@@ -36,3 +36,6 @@ var containsDuplicate = function (nums) {
 
 console.log(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])); // expect true
 console.log(containsDuplicate([1, 2, 3, 4])); // expect false;
+
+// time: O(logN);
+// space: 1;
