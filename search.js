@@ -7,3 +7,11 @@ return undefined; // otherwise, return undefined
 
 // time: O(n)
 // space: O(1)
+
+// alternative solution:
+
+var search = function (nums, target) {
+  if (nums.indexOf(target) > -1) return nums.indexOf(target);
+  return -1;
+};
+
