@@ -65,3 +65,7 @@ class LRUCache {
     }
   }
 }
+
+// alternative solution:
+
+
