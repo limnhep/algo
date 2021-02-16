@@ -26,3 +26,31 @@ var findDisappearedNumbers = function (nums) {
   }
   return result;
 };
+
+// alternative solution using Map():
+
+var findDisappearedNumbers = function (nums) {
+  const result = [];
+  const map = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    map.set(nums[i], true);
+  }
+  for (let i = 1; i <= nums.length; i++) {
+    if (!map.has(i)) result.push(i);
+  }
+  return result;
+};
+
+// alternative solution using Set():
+
+var findDisappearedNumbers = function (nums) {
+  const result = [];
+  const set = new Set();
+  for (let i = 0; i < nums.length; i++) {
+    set.add(nums[i]);
+  }
+  for (let i = 1; i <= nums.length; i++) {
+    if (!set.has(i)) result.push(i);
+  }
+  return result;
+};
