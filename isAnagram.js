@@ -35,4 +35,4 @@ var isAnagram = function (s, t) {
 };
 
 // time: O(n);
-// space: O(n);
+// space: O(1);
