@@ -42,3 +42,19 @@ var isPalindrome = function (s) {
 
 // time: O(n)
 // space: O(n) -> is used to filter non-alphanumeric characters
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isPalindrome = function (s) {
+  const rmSpecialChar = s.replace(/[^a-z0-9$]/gi, '').toLowerCase();
+  let left = 0,
+    right = rmSpecialChar.length - 1;
+  while (left < right) {
+    if (rmSpecialChar[left] !== rmSpecialChar[right]) return false;
+    left++;
+    right--;
+  }
+  return true;
+};
