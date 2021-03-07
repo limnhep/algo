@@ -46,3 +46,6 @@ var maxProduct = function (nums) {
   }
   return max;
 };
+
+// time: O(n)
+// space: O(1)
