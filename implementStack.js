@@ -36,3 +36,53 @@ class Stack {
     this.length--;
   }
 }
+// alternative solution:
+
+// LIFO, e.g. Stack of books. Implement a Stack class that has the following features: push(), pop(), peak(), and access() to access the last value of the stack, and list the pros and cons of using a Stack and its time complexity for search, access, delete, and insertion
+
+class Stack {
+  constructor() {
+    this._stack = {};
+    this._length = 0;
+  }
+  push(value) {
+    this._stack[length] = value;
+    this._length++;
+    return;
+  }
+  pop() {
+    if (this._length === 0) return null;
+    delete this._stack[length];
+    this._length--;
+    return;
+  }
+  size() {
+    if (this._length === 0) return null;
+    return this._length;
+  }
+  accessFirst() {
+    if (this._length === 0) return null;
+    return this._stack[0];
+  }
+  accessLast() {
+    if (this._length === 0) return null;
+    return this._stack[this._length];
+  }
+}
+
+// access: O(n)
+// search: O(n)
+// insertion: O(1)
+// Remove: O(1)
+
+const stack = new Stack();
+stack.push(1);
+stack.push(2);
+stack.push(3);
+console.log(stack); // Expect the result to be: {'0': 1, '1': 2, '2': 3};
+stack.pop();
+console.log(stack); // Expect the result to be: {'0': 1, '1': 2};
+console.log(stack.size()); // Expect the result to be: 2;
+console.log(stack.accessFirst()); // Expect the result to be: 1;
+console.log(stack.accessLast()); // Expect the result to be: 2;
+
