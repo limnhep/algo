@@ -38,3 +38,12 @@ function shapeArea(n) {
 
 // time: O(n);
 // space: O(n);
+
+// alternative solution:
+
+function shapeArea(n) {
+  return n * n + ((n - 1) * (n - 1));
+}
+
+// time: O(1)
+// space: O(1)
