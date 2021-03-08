@@ -62,3 +62,34 @@ class Queue {
     return this._lastIndex - this._firstIndex;
   }
 }
+
+// FIFO
+
+class Queue {
+  constructor() {
+    this._queue = {};
+    this._length = 0;
+    this._initialIndex = 0;
+  }
+  enqueue(value) {
+    const nextIndex = this._length + this._initialIndex;
+    this._queue[nextIndex] = value;
+    this._length++;
+    return;
+  }
+  dequeue() {
+    if (this.length !== 0) {
+      const firstEl = this._queue[this._initialIndex];
+      delete this._queue[this._initialIndex];
+      this._length--;
+      this._initialIndex++;
+      return;
+    }
+  }
+}
+
+// Time Complexity Analysis:
+// access: O(n)
+// search: O(n)
+// addition: O(1)
+// deletion: O(1)
