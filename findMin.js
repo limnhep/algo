@@ -43,3 +43,32 @@ var findMin = function (nums) {
   }
   return nums[left];
 };
+
+// time: O(logn);
+// space: O(1);
+
+// what if it contains duplicates?
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findMin = function (nums) {
+  let left = 0,
+    right = nums.length - 1;
+  if (nums[right] > nums[left]) return nums[left];
+  while (left < right) {
+    let mid = Math.floor((right + left) / 2);
+    if (nums[right] > nums[mid]) {
+      right = mid;
+    } else if (nums[mid] > nums[right]) {
+      left = mid + 1;
+    } else {
+      right -= 1;
+    }
+  }
+  return nums[left];
+};
+
+// time: O(logn)
+// space: O(1)
