@@ -64,3 +64,32 @@ var characterReplacement = function (s, k) {
 
 // time: O(n)
 // space: O(n)
+
+// alternative solution:
+
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {number}
+ */
+var characterReplacement = function (s, k) {
+  let left = 0;
+  let right = 0;
+  let max = 0;
+  let mostFreq = 0;
+  let freqHash = {};
+  while (right < s.length) {
+    freqHash[s[right]] = freqHash[s[right]] + 1 || 1;
+    mostFreq = Math.max(mostFreq, freqHash[s[right]]);
+    while (right - left + 1 - mostFreq > k) {
+      freqHash[s[left]]--;
+      left++;
+    }
+    max = Math.max(max, right - left + 1);
+    right++;
+  }
+  return max;
+};
+
+// time: O(n)
+// space: O(n)
