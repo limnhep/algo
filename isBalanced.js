@@ -18,7 +18,30 @@ const isBalanced = (str) => {
       }
     }
   }
-  return !stack.length; // if 1 => true, 0 => false
+  return !stack.length; // if 1 => true, 0 => false; !0 => true; !anything other number then it's false
+}
+
+// time: O(n)
+// space: O(n)
+
+//Alternative Solution
+
+function isBalanced1(str) {
+  const stack = [];
+  const closingParen = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+  }
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === '(' || str[i] === '[' || str[i] === '{') {
+      stack.push(str[i]);
+    } else {
+      let lastValue = stack.pop();
+      if (str[i] !== closingParen[lastValue]) return false;
+    }
+  }
+  return !stack.length;
 }
 
 // time: O(n)
