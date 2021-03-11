@@ -36,3 +36,27 @@ var findMaxAverage = function (nums, k) {
 
 // time: O(n) where n is the element in the given array
 // space: O(n) where n is the average of the contiguous subarray
+
+// Alternative Solution:
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findMaxAverage = function (nums, k) {
+  if (nums.length <= 1) return nums[0];
+  let max = -Infinity, left = 0, right = 0, sum = 0;
+  for (right = 0; right < nums.length; right++) {
+    sum += nums[right];
+    while (right - left + 1 >= k) {
+      max = Math.max(max, sum);
+      sum -= nums[left];
+      left++;
+    }
+  }
+  return max / k;
+};
+
+// time: O(n)
+// space: O(1)
