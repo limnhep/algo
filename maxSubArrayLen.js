@@ -38,3 +38,25 @@ var maxSubArrayLen = function (nums, k) {
 
 // time: O(n)
 // space: O(n)
+
+// Alternative Solution:
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var maxSubArrayLen = function (nums, k) {
+  const map = new Map();
+  map.set(0, 0);
+  let maxLen = 0, sum = 0, right = 0;
+  for (right = 0; right < nums.length; right++) {
+    sum += nums[right];
+    if (map.has(sum - k)) maxLen = Math.max(maxLen, right + 1 - map.get(sum - k));
+    if (!map.has(sum)) map.set(sum, right + 1);
+  }
+  return maxLen;
+};
+
+// time: O(n)
+// space: O(n)
