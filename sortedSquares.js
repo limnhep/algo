@@ -37,5 +37,5 @@ var sortedSquares = function (nums) {
   return nums.sort((a, b) => a - b);
 };
 
-// time: O(nlogn)
+// time: O(n)
 // space: O(1)
