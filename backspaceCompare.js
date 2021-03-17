@@ -44,7 +44,7 @@ var backspaceCompare = function (S, T) {
 
 var processed = function (str) {
   const result = [];
-  for (let i = 0; i < str.split('').length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (str[i] === '#') {
       result.pop();
     } else {
