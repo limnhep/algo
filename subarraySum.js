@@ -26,18 +26,19 @@ Constraints:
  * @return {number}
  */
 var subarraySum = function (nums, k) {
-  let sum = 0, count = 0;
   const map = new Map();
-  map.set(0, 1);
+  let sum = 0, count = 0;
+  map.set(0, 1); // starting point
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i];
-    if (map.has(sum - k)) {
-      count += map.get(sum - k);
-    }
-    map.set(sum, map.get(sum) + 1 || 1);
+    if (map.has(sum - k)) count += map.get(sum - k);
+    map.set(sum, map.get(sum) + 1 || 1); // by default, the value of the corresponding property is 1
   }
   return count;
 };
+
+// time: O(n) where n is number of elements in the given input array
+// space: O(n) where n is the distinct identifier
 
 // time: O(n);
 // space: O(n); map contains n distinct entries
