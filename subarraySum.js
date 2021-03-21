@@ -39,6 +39,3 @@ var subarraySum = function (nums, k) {
 
 // time: O(n) where n is number of elements in the given input array
 // space: O(n) where n is the distinct identifier
-
-// time: O(n);
-// space: O(n); map contains n distinct entries
