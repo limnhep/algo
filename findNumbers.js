@@ -25,3 +25,20 @@ var findNumbers = function (nums) {
 
 // time: O(n)
 // space: O(1)
+
+// Alternative solution
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findNumbers = function (nums) {
+  let numOfDigits = 0;
+  for (const num of nums) {
+    if (num.toString().length % 2 === 0) numOfDigits++;
+  }
+  return numOfDigits;
+};
+
+// time: O(n)
+// space: O(1)
