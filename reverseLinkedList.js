@@ -21,3 +21,14 @@ var reverseList = function (head) {
 
 // time: O(n)
 // space: O(1)
+
+var reverseList = function (head) {
+  let [prev, current] = [null, head]
+  while (current) {
+    [current.next, prev, current] = [prev, current, current.next]
+  }
+  return prev
+}
+
+// time: O(n)
+// space: O(1)
