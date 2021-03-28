@@ -48,6 +48,13 @@ Constraints:
  * @param {number} val
  * @return {number}
  */
+
+/*
+    input: nums of integers; val, a value that will be removed
+    output: nums with the given val removed
+    edge cases: n/a, assuming none
+    strategy: traverse over each element, if it's not the value, set nums at the position to the current element
+*/
 var removeElement = function (nums, val) {
   let n = 0;
   for (let i = 0; i < nums.length; i++) {
@@ -60,4 +67,4 @@ var removeElement = function (nums, val) {
 };
 
 // time: O(n)
-// space: O(1) -> in-place
+// space: O(1)
