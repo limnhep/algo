@@ -20,3 +20,4 @@ const findFirstUnique = (arr) => {
   const lastEl = unique.length - 1;
   return uniqueArr[lastEl];
 }
+
