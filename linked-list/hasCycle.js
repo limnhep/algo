@@ -64,3 +64,6 @@ var hasCycle = function (head) {
   }
   return true;
 };
+
+// time: O(n)
+// space: O(1)
