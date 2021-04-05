@@ -45,17 +45,17 @@ Each element in the array appears twice except for one element which appears onl
             - if the value of the property is 1
                 - return the key in Number data type
 */
-var singleNumber = function(nums) {
+var singleNumber = function (nums) {
   const obj = {};
   for (let num of nums) {
-      if (num in obj) {
-          obj[num]++;
-      } else {
-          obj[num] = 1;
-      }
+    if (num in obj) {
+      obj[num]++;
+    } else {
+      obj[num] = 1;
+    }
   }
   for (let key in obj) {
-      if (obj[key] === 1) return Number(key);
+    if (obj[key] === 1) return Number(key);
   }
 };
 
