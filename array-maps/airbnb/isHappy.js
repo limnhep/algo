@@ -36,7 +36,7 @@ Constraints:
  */
 var isHappy = function (n) {
   const obj = {};
-  while (n !== 1 && !obj[n]) {
+  while (n !== 1 && obj[n] === undefined) {
     obj[n] = true;
     n = sumOfSq(n);
   }
