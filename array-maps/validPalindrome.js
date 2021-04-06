@@ -37,3 +37,15 @@ var removeOneChar = function (s, index) {
 
 // time: O(n)
 // space: O(1)
+
+
+// alternative soution to isPalindrome
+
+var isPalindrome = function (s) {
+  let j = s.length - 1;
+  for (let i = 0; i <= Math.floor(s.length / 2); i++) {
+    if (s[i] !== s[j]) return false;
+    j--;
+  }
+  return true;
+}
