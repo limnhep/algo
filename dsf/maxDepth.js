@@ -48,4 +48,4 @@ var maxDepth = function (root) {
 };
 
 // time: O(n)
-// space: O(1)
+// space: O(n) - worst case if the tree is unbalanced
