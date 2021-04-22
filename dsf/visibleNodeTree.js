@@ -9,12 +9,12 @@ Input:
 Output: 3
 */
 
-function visible_tree_node(root) {
+function visibleNodeTree(root) {
   return dfs(root, Number.NEGATIVE_INFINITY);
 }
 
 function dfs(root, max) {
-  if (!root) return 0;
+  if (!root) return 0; // same as root === null
   let total = 0;
   if (root.val >= max) total++;
   total += dfs(root.left, Math.max(root.val, max));
