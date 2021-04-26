@@ -78,3 +78,30 @@ var lengthOfLongestSubstring = function (s) {
 
 // time: O(n)
 // space: O(n)
+
+// alternative solution using Map()
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function (s) {
+  if (s.length <= 1) return s.length;
+  let left = 0;
+  let right = 0;
+  let max = 0;
+  const seen = new Map();
+  for (right = 0; right < s.length; right++) {
+    const currentChar = s[right];
+    const prevSeenChar = seen.get(currentChar);
+    if (prevSeenChar >= left) {
+      left = prevSeenChar + 1;
+    }
+    seen.set(currentChar, right);
+    max = Math.max(max, right - left + 1);
+  }
+  return max;
+};
+
+// time: O(n)
+// space: O(n)
