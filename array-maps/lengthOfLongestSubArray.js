@@ -26,8 +26,8 @@ const lengthOfLongestSubArray = (str, k) => {
   for (let right = 0; right < str.length; right++) {
     const rightChar = str[right];
     frequencyMap[rightChar] = (frequencyMap[rightChar] || 0) + 1;
-    maxRepeatChar = Math.max(maxRepeatChar, frequencyMap[rightChar]);
-    while (right - left + 1 - maxRepeatChar > k) {
+    maxRepeatChar = Math.max(maxRepeatChar, frequencyMap[rightChar]); // most repeated characters
+    while (right - left + 1 - maxRepeatChar > k) { // remaining characters > than the constraint size k
       const leftChar = str[left];
       frequencyMap[leftChar]--;
       left++;
