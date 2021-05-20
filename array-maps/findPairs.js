@@ -71,8 +71,12 @@ var findPairs = function (nums, k) {
  * @param {number} k
  * @return {number}
  */
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
 var findPairs = function (nums, k) {
-  nums = k === 0 ? nums : Array.from(new Set(nums));
   const uniqueHashMap = new Map();
   let uniquePairs = 0;
   for (const num of nums) {
@@ -87,6 +91,9 @@ var findPairs = function (nums, k) {
   })
   return uniquePairs;
 };
+
+// time: O(n)
+// space: O(n)
 
 // time: O(n)
 // space: O(n)
