@@ -63,3 +63,30 @@ var findPairs = function (nums, k) {
 
 // time: O(n)
 // space: O(n)
+
+// alternative
+
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findPairs = function (nums, k) {
+  nums = k === 0 ? nums : Array.from(new Set(nums));
+  const uniqueHashMap = new Map();
+  let uniquePairs = 0;
+  for (const num of nums) {
+    uniqueHashMap.set(num, uniqueHashMap.get(num) + 1 || 1);
+  }
+  uniqueHashMap.forEach((val, key) => {
+    if (k === 0) {
+      if (val > 1) uniquePairs++;
+    } else {
+      if (uniqueHashMap.has(key + k)) uniquePairs++;
+    }
+  })
+  return uniquePairs;
+};
+
+// time: O(n)
+// space: O(n)
