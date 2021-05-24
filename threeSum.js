@@ -62,3 +62,34 @@ var threeSum = function (nums) {
   return triplets;
 };
 
+// alternative solution
+
+function suggestThreeProducts(itemPrices) {
+  var res = []
+  itemPrices.sort(function (a, b) { return a - b })
+  for (var i = 0; i < itemPrices.length; i++) {
+    if (itemPrices[i] > 200)
+      break
+    if (i == 0 || itemPrices[i - 1] != itemPrices[i])
+      twoProducts(itemPrices, i, res)
+  }
+  return res
+}
+
+function twoProducts(itemPrices, i, res) {
+  var seen = new Set()
+  j = i + 1
+  while (j < itemPrices.length) {
+    var complement = 200 - itemPrices[i] - itemPrices[j]
+    if (seen.has(complement)) {
+      res.push([itemPrices[i], itemPrices[j], complement])
+      while (j + 1 < itemPrices.length && itemPrices[j] == itemPrices[j + 1])
+        j += 1
+    }
+    seen.add(itemPrices[j])
+    j += 1
+  }
+}
+
+var itemPrices = [100, 75, 150, 200, 50, 65, 40, 30, 15, 25, 60]
+console.log(suggestThreeProducts(itemPrices))
