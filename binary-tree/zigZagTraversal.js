@@ -1,5 +1,6 @@
 /*
   Given a binary tree, return its level order traversal but in alternate left to right order.
+  BFS
 */
 
 function zigzag_traversal(root) {
