@@ -1,13 +1,14 @@
 /*
-  Given a binary tree, return its level order traversal. The input is the root node of the tree. The output should be a list of lists containing tree nodes at each level.
+  Given a binary tree, return its level order traversal but in alternate left to right order.
 */
 
-function levelOrderTraversal(root) {
-  if (!root) return [];
+function zigzag_traversal(root) {
+  if (root === null) return [];
   const result = [];
   const queue = [root];
-  while (queue.length) {
-    const length = queue.length;
+  let flag = true;
+  while (queue.length > 0) {
+    let length = queue.length;
     let count = 0;
     const currentLevel = [];
     while (count < length) {
@@ -17,10 +18,12 @@ function levelOrderTraversal(root) {
       if (currentNode.right) queue.push(currentNode.right);
       count++;
     }
+    if (!flag) currentLevel.reverse();
     result.push(currentLevel);
+    flag = !flag;
   }
   return result;
 }
 
-// time: O(n)
-// space: O(n)
+// time: O(N)
+// space: O(N) where N is the height of the tree
