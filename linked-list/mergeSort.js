@@ -38,3 +38,4 @@ let merge_sorted = function (head1, head2) {
   TIME: O(N)
   SPACE: O(1)
 */
+
