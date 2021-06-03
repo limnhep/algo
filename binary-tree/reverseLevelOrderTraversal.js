@@ -3,7 +3,6 @@
 */
 
 class TreeNode {
-
   constructor(value) {
     this.value = value;
     this.left = null;
@@ -31,7 +30,7 @@ const reverseLevelOrderTraversal = function (root) {
   return result;
 }
 
-var root = new TreeNode(12)
+let root = new TreeNode(12)
 root.left = new TreeNode(7)
 root.right = new TreeNode(1)
 root.left.left = new TreeNode(9)
