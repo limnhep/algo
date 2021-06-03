@@ -24,3 +24,38 @@ function levelOrderTraversal(root) {
 
 // time: O(n)
 // space: O(n)
+
+// alternative solution
+
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {number[][]}
+ */
+var levelOrder = function (root) {
+  if (root === null) return [];
+  const queue = [root];
+  const levels = [];
+  while (queue.length !== 0) {
+    const level = [];
+    let queueLen = queue.length;
+    for (let i = 0; i < queueLen; i++) {
+      let node = queue.shift(); // remove the zeroth index
+      if (node.left) queue.push(node.left);
+      if (node.right) queue.push(node.right);
+      level.push(node.val);
+    }
+    levels.push(level);
+  }
+  return levels;
+};
+
+// time: O(n)
+// space: O(n)
