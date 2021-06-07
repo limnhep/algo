@@ -85,3 +85,29 @@ MyHashMap.prototype.remove = function (key) {
 
 // time: O(N)
 // space: O(N)
+
+// Class Constructor Method
+
+class MyHashMap {
+  constructor() {
+    this.storage = [];
+  }
+  hash(key) {
+    return key;
+  }
+  put(key, value) {
+    const address = this.hash(key);
+    this.storage[address] = value;
+    return;
+  }
+  get(key) {
+    const address = this.hash(key);
+    if (this.storage[address] >= 0) return this.storage[address];
+    return -1;
+  }
+  remove(key) {
+    const address = this.hash(key);
+    delete this.storage[address];
+    return;
+  }
+}
