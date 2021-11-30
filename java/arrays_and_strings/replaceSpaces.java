@@ -1,7 +1,9 @@
 class SpaceReplacement {
   public static void main(String[] args) {
     String inputStr1 = "Mr John Smith   ";
-    System.out.println(SpaceReplacement.replaceSpaces(inputStr1, 13));
+    String resultStr = "Mr%20John%20Smith";
+    System.out.println("inputStr1 is Mr%20John%20Smith: " + SpaceReplacement.replaceSpaces(inputStr1, 13).trim());
+    System.out.println(resultStr.equals(SpaceReplacement.replaceSpaces(inputStr1, 13).trim()));
   }
 
   static String replaceSpaces(String str, int trueLength) {
