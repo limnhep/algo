@@ -10,6 +10,8 @@ class OneAway {
   }
 
   static boolean oneAway(String str1, String str2) {
+    if (str1.length() > str2.length() || str2.length() > str1.length())
+      return false;
     int[] charsStorage = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
     int count = 0;
     for (char c : str1.toCharArray()) {
