@@ -1,5 +1,10 @@
-class CyclicSort {
+/*
 
+  @request: Sort each element within the array in-place
+  @param: int[] => nums
+  @return: int[] => sorted nums
+*/
+class CyclicSort {
   public static void sort(int[] nums) {
     int i = 0;
     while (i < nums.length) {
@@ -12,18 +17,26 @@ class CyclicSort {
     }
   }
 
-  // swap num at i w/ j and j w/ i
+  // Swap element at i with element at j and element at j with element at i
   private static void swap(int[] nums, int i, int j) {
-    int temp = nums[i];
+    int tempNum = nums[i];
     nums[i] = nums[j];
-    nums[j] = temp;
+    nums[j] = tempNum;
   }
 
   public static void main(String[] args) {
-    int[] array = new int[] { 3, 1, 5, 4, 2 };
-    CyclicSort.sort(array);
-    for (int num : array) {
-      System.out.println(num + " ");
+    int[] inputArray = new int[] { 1, 3, 4, 2, 5 };
+    CyclicSort.sort(inputArray);
+    for (int num : inputArray) {
+      System.out.println(num);
+      System.out.println();
     }
   }
 }
+
+/*
+ * Complexity Analysis:
+ *
+ * time: O(n) where n is the number of elements in the given input array -
+ * space: O(1)
+ */
