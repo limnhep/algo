@@ -1,7 +1,7 @@
 /*
-  @request:
-  @param:
-  @return:
+  @request: Find all duplicates number in the input array
+  @param: int[] => nums
+  @return: ArrayList<Integer> => listOfDuplicateNumbers
 */
 
 import java.util.ArrayList;
@@ -33,8 +33,8 @@ class FindAllDuplicates {
 
   public static void main(String[] args) {
     int[] inputArray = new int[] { 1, 2, 4, 2, 5, 7, 7 };
-    ArrayList<Integer> resultArrList = FindAllDuplicates.findAllDuplicates(inputArray); // Expect 2, 7
-    for (Integer num : resultArrList) {
+    ArrayList<Integer> listOfDuplicateNumbers = FindAllDuplicates.findAllDuplicates(inputArray); // Expect 2, 7
+    for (Integer num : listOfDuplicateNumbers) {
       System.out.println(num);
       System.out.println();
     }
@@ -43,6 +43,6 @@ class FindAllDuplicates {
 
 /*
  * Complexity Analysis:
- * 
+ *
  * Time: O(n) Space: O(1)
  */
