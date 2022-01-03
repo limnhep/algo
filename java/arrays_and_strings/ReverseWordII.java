@@ -1,7 +1,7 @@
 /*
-  @request:
-  @param:
-  @result:
+  @request: Reverse each word while preserving whitespace and initial word order
+  @param: String str
+  @result: String
 */
 
 class ReverseWordII {
@@ -26,3 +26,6 @@ class ReverseWordII {
     System.out.println(ReverseWordII.reverseWord(inputStr)); // s'teL !edocteel
   }
 }
+
+// time: O(n)
+// space: O(n)
