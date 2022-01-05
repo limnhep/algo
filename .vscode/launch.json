@@ -1,0 +1,38 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - LevelOrderSuccessor",
+      "request": "launch",
+      "mainClass": "tree_bfs.LevelOrderSuccessor",
+      "projectName": "algo_4eae6b31"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - RemoveDuplicates",
+      "request": "launch",
+      "mainClass": "linked_lists.RemoveDuplicates",
+      "projectName": "algo_4eae6b31"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
+      "mainClass": "arrays_and_strings.Main",
+      "projectName": "algo_4eae6b31"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Local Node File",
+      "console": "integratedTerminal",
+      "program": "${file}"
+    },
+    {
+      "name": "Launch index.html",
+      "type": "chrome",
+      "request": "launch",
+      "file": "${workspaceFolder}/index.html"
+    }
+  ]
+}
