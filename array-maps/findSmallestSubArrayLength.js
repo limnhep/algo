@@ -17,7 +17,7 @@
 
   const arr = [2, 1, 5, 2, 8];
   const k = 7;
-  console.log(findSmallestSubArrayWithGivenSum(arr, k));
+  console.log(findSmallestSubArrayWithGivenSum(arr, k)); // 1
 })()
 
 /*
