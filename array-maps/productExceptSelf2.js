@@ -8,7 +8,7 @@
     @return {number[]}
     @strategy:
         => create two variables (left and right pointer) and set it one to 1
-        => traverse from right to left element and multiply it by right
+        => traverse from right to left element and set right element to right pointer and multiple right pointer to the right element
         => tragerse from left to right element and multiply it by left
         => return the result
 */
