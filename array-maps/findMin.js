@@ -27,6 +27,6 @@ var findMin = function (nums) {
 };
 
 /*
-  time: O(n)
+  time: O(logn) // cut in halves
   space: O(1)
 */
