@@ -39,3 +39,26 @@ var groupAnagrams = function (strs) {
   time: O(nxm) where n is the number of elements in the given array where m is the number of character in the given string
   space: O(nxm)
 */
+
+/*
+  Alternative Option:
+*/
+
+var groupAnagrams = function (strs) {
+  const anagramsHashMap = {};
+  for (const str of strs) {
+    const charArr = str.split("").sort();
+    const strValues = charArr.join("");
+    if (strValues in anagramsHashMap) {
+      anagramsHashMap[strValues].push(str);
+    } else {
+      anagramsHashMap[strValues] = [str];
+    }
+  }
+  return Object.values(anagramsHashMap);
+};
+
+/*
+  time: O(nlogn)
+  space: O(n)
+*/
