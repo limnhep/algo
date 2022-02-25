@@ -26,6 +26,10 @@
       => keep track of the current element
           => get the currMax, which is the currNum and currMax + currNum
           => globalMax is the currMax or the current storage
+
+  time and space complexity analysis:
+    => time: O(n)
+    => space: O(1)
   */
 
   const maxSubArray = (numbers) => {
