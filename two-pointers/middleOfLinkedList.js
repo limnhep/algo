@@ -17,6 +17,7 @@
     let slow = head;
     let fast = head;
     while (fast && fast.next) {
+      // if null, false, exit while loop
       fast = fast.next.next;
       slow = slow.next;
     };
