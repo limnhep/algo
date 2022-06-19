@@ -18,6 +18,9 @@
           time: O(n)
           space: O(1) => modified array in-place
   */
+
+  const assert = require("assert");
+
   const moveZeroes = (numbers) => {
     let slow = 0;
     for (let fast = 0; fast < numbers.length; fast++) {
@@ -36,5 +39,17 @@
     const strListToNumList = list.split(" ").map(str => parseInt(str, 10));
     const resultMoveZeroes = moveZeroes(strListToNumList);
     console.log("resultMoveZeroes: ", resultMoveZeroes);
+  };
+
+  try {
+    const sampleStr = "1 0 2 0 0 7";
+    const strToNumList = sampleStr.split(" ").map(str => parseInt(str, 10));
+    const resultMoveZeroes = moveZeroes(strToNumList);
+    assert.deepEqual(resultMoveZeroes, [1, 2, 7, 0, 0, 0]);
+    console.log("PASSED");
+  } catch (ERR) {
+    console.log("FAILED");
+    console.log("EXPECTED: [ 1, 2, 7, 0, 0, 0 ]");
+    console.log(ERR);
   };
 })();
