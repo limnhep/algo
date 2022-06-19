@@ -1,23 +1,37 @@
 package main
 
-// import format library
-import "fmt"
+import (
+	"bufio"
+	"fmt"
+	"myapp/doctor"
+	"os"
+	"strings"
+);
 
-// require main() to run just like *public static void main(String[] args)* in JAVA
-func main() {
-	/*
-		Declare a variable:
-			var sampleInputStr string = "Hello World!";
-		Declare a variable short-handed:
-			sampleInputStr := "Hello World!";
-			(:= will assume the data type based on the input data)
-	*/
+func main(){
 
-	sampleInputStr := "Hello World!";
-	sayHello(sampleInputStr);
+	reader := bufio.NewReader(os.Stdin);
+
+	whatToSay := doctor.Intro();
+
+	fmt.Println(whatToSay);
+
+	for {
+		fmt.Print("-> ");
+		userInput, _ := reader.ReadString('\n');
+
+		// Replace the enter key for Window users w/ ""
+		userInput = strings.Replace(userInput, "\r\n", "", -1);
+
+		// Replace the enter key for Mac user w/ ""
+		userInput = strings.Replace(userInput, "\n", "", -1);
+
+		if (strings.ToLower(userInput) == "quit") {
+			break;
+		} else {
+			response := doctor.Response(userInput);
+			fmt.Println(response);
+		};
+	};
 };
 
-// Declare a function w/ str as the parameter
-func sayHello(str string) {
-	fmt.Println(str);
-};

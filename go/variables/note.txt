@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	/*
+		There are multiple ways to declare a Variable in Golang
+	*/
+
+	// One way -> Declare, assign the datatype, and then assign the variable to a value (two steps)
+	var firstNumber int;
+	firstNumber = 1;
+
+	// Second way -> Declare and then assign the variable to a value
+	var secondNumber = 2;
+
+	// Third way -> Declare name and use := to assign the value, and let Golang figure out the datatype (this is short-hand)
+
+	thirdNumber := 3;
+
+};
